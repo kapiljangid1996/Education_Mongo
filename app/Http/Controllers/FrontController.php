@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Course\Course;
 
 class FrontController extends Controller
 {
@@ -22,6 +23,7 @@ class FrontController extends Controller
     public function index()
     {
         $categories = Category::with('children')->whereNull('parent_id')->get();
-        return view('front.index')->with('categories',$categories);
+        $courses = Course::get();
+        return view('front.index')->with('categories',$categories)->with('courses',$courses);
     }
 }
