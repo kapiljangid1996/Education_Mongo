@@ -91,7 +91,7 @@ Result
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $results->links() !!}
+								{!! $results->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

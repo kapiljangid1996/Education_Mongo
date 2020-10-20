@@ -91,7 +91,7 @@ Preparation
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $preparations->links() !!}
+								{!! $preparations->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

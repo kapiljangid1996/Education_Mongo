@@ -100,7 +100,7 @@ College
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $colleges->links() !!}
+								{!! $colleges->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

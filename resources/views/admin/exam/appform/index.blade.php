@@ -91,7 +91,7 @@ Application Form
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $appforms->links() !!}
+								{!! $appforms->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

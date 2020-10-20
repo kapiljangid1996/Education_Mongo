@@ -91,7 +91,7 @@ Pattern
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $patterns->links() !!}
+								{!! $patterns->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

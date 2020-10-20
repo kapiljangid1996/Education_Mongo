@@ -91,7 +91,7 @@ Date
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $dates->links() !!}
+								{!! $dates->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

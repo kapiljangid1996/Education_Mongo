@@ -94,7 +94,7 @@ Course
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $courses->links() !!}
+								{!! $courses->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

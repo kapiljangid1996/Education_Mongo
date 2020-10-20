@@ -91,7 +91,7 @@ Cut Off
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $cutoffs->links() !!}
+								{!! $cutoffs->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

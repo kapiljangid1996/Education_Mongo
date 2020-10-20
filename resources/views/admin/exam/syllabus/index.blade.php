@@ -91,7 +91,7 @@ Syllabus
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $syllabi->links() !!}
+								{!! $syllabi->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

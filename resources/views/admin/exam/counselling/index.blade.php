@@ -91,7 +91,7 @@ Counselling
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $counsellings->links() !!}
+								{!! $counsellings->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

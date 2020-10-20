@@ -91,7 +91,7 @@ Overview
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $overviews->links() !!}
+								{!! $overviews->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

@@ -97,7 +97,7 @@ Category
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $categories->links() !!}
+								{!! $categories->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>

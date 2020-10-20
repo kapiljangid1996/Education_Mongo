@@ -112,7 +112,7 @@ Exam
 						</div>
 						<div class="row">
 							<ul class="pagination">
-								{!! $exams->links() !!}
+								{!! $exams->links("pagination::bootstrap-4") !!}
 							</ul>
 						</div>
 					</div>
