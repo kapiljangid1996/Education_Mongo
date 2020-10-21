@@ -15,6 +15,7 @@ use App\Http\Controllers\Admin\ExamsController;
 */
 
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index']);
+Route::get('/course', [App\Http\Controllers\FrontController::class, 'courseList']);
 
 //----------------------------------------User-----------------------------------------------------------------------
 

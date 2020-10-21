@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Education</title>
+	<title>@yield('page_title', 'Education')</title>
 	<meta name="description" content="Education Website">
 	<meta name="keywords" content="Education Website">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700|Open+Sans" rel="stylesheet">
@@ -29,12 +29,6 @@
 	@include('pages.header')
 
 	<!-- End Header -->
-
-	<!-- Slider -->
-
-	@include('pages.slider')
-
-	<!-- End Slider -->
 
 	<!-- Content -->
 	

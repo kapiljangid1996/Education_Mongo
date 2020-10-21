@@ -1,6 +1,13 @@
 @extends('layouts.front')
 
 @section('content')
+
+<!-- Slider -->
+
+@include('pages.slider')
+
+<!-- End Slider -->
+
 <section class="probootstrap-section probootstrap-section-colored">
 	<div class="container">
 		<div class="row">
@@ -104,7 +111,7 @@
 							<div class="col-md-12">
 								<div class="owl-carousel" id="owl1">
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
@@ -113,7 +120,7 @@
 										</a>
 									</div>
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
@@ -122,7 +129,7 @@
 										</a>
 									</div>
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, ut.</p>
@@ -144,7 +151,7 @@
 							<div class="col-md-12">
 								<div class="owl-carousel" id="owl2">
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -153,7 +160,7 @@
 										</a>
 									</div>
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -162,7 +169,7 @@
 										</a>
 									</div>
 									<div class="item">
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive"></figure>
+										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="{{asset('frontDesign/img/2.jpg')}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>Tempora consectetur unde nisi</h3>
 												<span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
@@ -200,7 +207,7 @@
 						<a href="{{url('/course/'.$course->course_slug)}}" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="/Uploads/Course/{{$course->course_image}}" class="img-responsive"></figure>
 							<div class="probootstrap-text">
 								<h3>{{$course->course_name}}</h3>
-								<span class="probootstrap-date"><i class="icon-calendar"></i>July 9, 2017</span>
+								<span class="probootstrap-date"><i class="icon-calendar"></i>{{ $course->created_at->format('M d, Y') }}</span>
 								<p>{{$course->course_short_description}}</p>
 							</div>
 						</a>
@@ -208,6 +215,11 @@
 				</div>
 			</div>
 			@endforeach
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<p><a href="{{url('/course')}}" class="btn btn-primary">View all Courses</a></p>
+			</div>
 		</div>
 	</div>
 </section>
