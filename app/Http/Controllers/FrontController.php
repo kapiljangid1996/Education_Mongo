@@ -22,8 +22,8 @@ class FrontController extends Controller
      */
     public function index()
     {
-        $categories = Category::with('children')->whereNull('parent_id')->get();
-        $courses = Course::where('status','=','1')->get();
+        $categories = Category::with('children')->with('exam')->with('course')->with('college')->whereNull('parent_id')->get();
+        $courses = Course::where('status','=','1')->take(6)->get();
         return view('front.index')->with('categories',$categories)->with('courses',$courses);
     }
 
