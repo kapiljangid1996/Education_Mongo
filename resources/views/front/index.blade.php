@@ -208,7 +208,7 @@
 							<div class="probootstrap-text">
 								<h3>{{$course->course_name}}</h3>
 								<span class="probootstrap-date"><i class="icon-calendar"></i>{{ $course->created_at->format('M d, Y') }}</span>
-								<p>{{$course->course_short_description}}</p>
+								<p class="show-read-more">{{$course->course_short_description}}</p>
 							</div>
 						</a>
 					</div>
@@ -223,4 +223,35 @@
 		</div>
 	</div>
 </section>
+
+<!-- Style -->
+<style>
+    .show-read-more .more-text{
+        display: none;
+    }
+</style>
+<!-- End Style -->
+
+<!-- Script -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function(){
+    var maxLength = 55;
+    $(".show-read-more").each(function(){
+        var myStr = $(this).text();
+        if($.trim(myStr).length > maxLength){
+            var newStr = myStr.substring(0, maxLength);
+            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+            $(this).append('<span class="more-text">' + removedStr + '</span>');
+        }
+    });
+    $(".read-more").click(function(){
+        $(this).siblings(".more-text").contents().unwrap();
+        $(this).remove();
+    });
+});
+</script>
+<!-- End Script -->
 @stop
