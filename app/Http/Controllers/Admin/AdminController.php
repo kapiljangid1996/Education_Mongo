@@ -16,4 +16,9 @@ class AdminController extends Controller
     {
         return view('admin.index');
     }
+
+   	public function showSliderForm()
+    {
+        return view('admin.pages.slider');
+    }
 }

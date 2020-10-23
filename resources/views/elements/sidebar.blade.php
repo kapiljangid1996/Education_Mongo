@@ -42,6 +42,9 @@
 			<li class="nav-item ">
 				<a class="nav-link" href="{{ url('/admin/college') }}"><i class="material-icons">layers</i><p> Colleges </p></a></li>
 			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="{{ url('/admin/slider') }}"><i class="material-icons">add_to_photos</i><p> Slider Image </p></a></li>
+			</li>
 		</ul>
 	</div>	
 </div>

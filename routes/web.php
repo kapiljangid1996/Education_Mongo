@@ -158,4 +158,7 @@ Route::prefix('admin')->group(function (){
 
 	//Colleges
 	Route::resource('college', App\Http\Controllers\Admin\CollegesController::class);
+
+	//slider Image
+	Route::get('slider', [App\Http\Controllers\Admin\AdminController::class, 'showSliderForm']);
 });
