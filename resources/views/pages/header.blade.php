@@ -44,25 +44,25 @@
 								<li class="dropdown-submenu dropdown">
 									<a href="#" data-toggle="dropdown" class="dropdown-toggle">{{ $child->cat_name }}</a>
 									@if ($child->exam)
-										@foreach ($child->exam as $exams)
 										<ul class="dropdown-menu">
-											<li><a href="{{url('/exam/'.$exams->exam_slug)}}">{{ $exams->exam_name }}</a></li>
+											@foreach ($child->exam as $exams)
+												<li><a href="{{url('/exam/'.$exams->exam_slug)}}">{{ $exams->exam_name }}</a></li>
+											@endforeach
 										</ul>
-										@endforeach
 									@endif
-									@if($child->course)
-										@foreach ($child->course as $courses)
+									@if($child->course)										
 										<ul class="dropdown-menu">
-											<li><a href="{{url('/course/'.$courses->course_slug)}}">{{ $courses->course_name }}</a></li>
+											@foreach ($child->course as $courses)
+												<li><a href="{{url('/course/'.$courses->course_slug)}}">{{ $courses->course_name }}</a></li>											
+											@endforeach
 										</ul>
-										@endforeach
 									@endif
 									@if($child->college)
-										@foreach ($child->college as $colleges)
 										<ul class="dropdown-menu">
-											<li><a href="{{url('/college/'.$colleges->colleges_slug)}}">{{ $colleges->college_name }}</a></li>
+											@foreach ($child->college as $colleges)
+												<li><a href="{{url('/college/'.$colleges->colleges_slug)}}">{{ $colleges->college_name }}</a></li>
+											@endforeach
 										</ul>
-										@endforeach
 									@endif
 								</li>
 							@endforeach
