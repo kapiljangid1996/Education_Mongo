@@ -24,7 +24,7 @@ class Course extends Model
     public static function storeCourse($request)
     {
     	$request->validate([
-            'course_name'  => 'required|min:3|max:255|string',
+            'course_name'  => 'required|max:255|string',
             'course_slug'  => 'required|unique:courses,course_slug',
             'category_id' => 'required|sometimes|nullable',
             'exam_id' => 'required|sometimes|nullable',
@@ -59,7 +59,7 @@ class Course extends Model
     public static function editCourse($request,$id)
     {
     	$request->validate([
-            'course_name'  => 'required|min:3|max:255|string',
+            'course_name'  => 'required|max:255|string',
             'course_slug'  => 'required',
             'category_id' => 'required|sometimes|nullable',
             'exam_id' => 'required|sometimes|nullable',

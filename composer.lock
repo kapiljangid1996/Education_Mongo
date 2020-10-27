@@ -953,16 +953,16 @@
         },
         {
             "name": "jenssegers/mongodb",
-            "version": "v3.8.0",
+            "version": "v3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jenssegers/laravel-mongodb.git",
-                "reference": "a362df4f7fec5b91fea92b64273a531db34adfca"
+                "reference": "a9c74106c27abeb7d57400bd79babe8688123232"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/a362df4f7fec5b91fea92b64273a531db34adfca",
-                "reference": "a362df4f7fec5b91fea92b64273a531db34adfca",
+                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/a9c74106c27abeb7d57400bd79babe8688123232",
+                "reference": "a9c74106c27abeb7d57400bd79babe8688123232",
                 "shasum": ""
             },
             "require": {
@@ -1017,6 +1017,10 @@
                 "mongo",
                 "mongodb"
             ],
+            "support": {
+                "issues": "https://github.com/jenssegers/laravel-mongodb/issues",
+                "source": "https://github.com/jenssegers/laravel-mongodb/tree/v3.8.1"
+            },
             "funding": [
                 {
                     "url": "https://github.com/jenssegers",
@@ -1027,7 +1031,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-30T08:58:21+00:00"
+            "time": "2020-10-22T07:49:38+00:00"
         },
         {
             "name": "laravel/framework",
@@ -7954,5 +7958,5 @@
         "php": "^7.3"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }

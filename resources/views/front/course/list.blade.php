@@ -32,7 +32,7 @@ Courses
 								<div class="owl-carousel" id="owl1">
 								@foreach($courses as $course)
 								<div class="item">						
-									<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="/Uploads/Course/{{$course->course_image}}" class="img-responsive"></figure>
+									<a href="{{url('/course/'.$course->course_slug)}}" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="/Uploads/Course/{{$course->course_image}}" class="img-responsive"></figure>
 										<div class="probootstrap-text">
 											<h3>{{$course->course_name}}</h3>
 											<p>{{$course->course_short_description}}</p>
@@ -53,7 +53,7 @@ Courses
 								@if($category->cat_name == $course->category->parent->cat_name)
 									<div class="col-md-4">
 									<div class="item">						
-										<a href="#" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="/Uploads/Course/{{$course->course_image}}" class="img-responsive"></figure>
+										<a href="{{url('/course/'.$course->course_slug)}}" class="probootstrap-featured-news-box"><figure class="probootstrap-media"><img src="/Uploads/Course/{{$course->course_image}}" class="img-responsive"></figure>
 											<div class="probootstrap-text">
 												<h3>{{$course->course_name}}</h3>
 												<p>{{$course->course_short_description}}</p>
